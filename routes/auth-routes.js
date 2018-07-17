@@ -5,8 +5,9 @@ router.get('/login',(req,res)=>{
     res.render('login')
 });
 
-router.get('logout',(req,res)=>{
-    res.send('logging out')
+router.get('/logout',(req,res)=>{
+    req.logout();
+    res.redirect('/')
 })
 //sending request for google authenticaion
 router.get('/google',passport.authenticate('google', {scope:['profile']}),(req,res)=>{

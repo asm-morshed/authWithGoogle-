@@ -11,6 +11,8 @@ const authProfile = require('./routes/auth-profile')
 const passportSetup = require('./config/passport-setup');
 const mongokeys = require('./config/keys');
 
+const port = process.env.PORT || 3000;
+
 
 app.set('view engine','ejs')
 
@@ -34,7 +36,7 @@ app.get('/',(req,res)=>{
 
 })
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
 	console.log('server is working on port 3000')
 
 })

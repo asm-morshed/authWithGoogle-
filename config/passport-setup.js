@@ -17,7 +17,8 @@ passport.use(
     new googleStrategy({
     clientID:'759538168653-6jgeg1qarb1kjpb9sj6cadu6ofjcv6pm.apps.googleusercontent.com',
     clientSecret: 'OnE8FWosfQ0NiwSvvDyUcZQz',
-    callbackURL: 'http://localhost:3000/auth/google/cb'
+    //callbackURL: 'http://localhost:3000/auth/google/cb'
+    callbackURL: 'https://loginwithgoogle.herokuapp.com/auth/google/cb'
     },
     function(accessToken,refreshToken, profile,cb){
         console.log("After clicking for auth")
